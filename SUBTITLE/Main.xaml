@@ -107,25 +107,15 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID0" DisplayName="Login" sap:VirtualizedContainerService.HintSize="380,472" sap2010:WorkflowViewState.IdRef="State_2">
+            <State x:Name="__ReferenceID0" DisplayName="Login" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_2">
               <State.Entry>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PORTALLOGIN.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="edit_selector">
-                      <Literal x:TypeArguments="x:String">&lt;webctrl id='editUserName' tag='DIV' /&gt;</Literal>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="portal_url">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;url&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="username">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;username&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="password">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;password&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="report_path">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Reportpath&quot;).ToString" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="edit_selector">&lt;webctrl id='editUserName' tag='DIV' /&gt;</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="portal_url">[Out_Config("url").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="username">[Out_Config("username").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="password">[Out_Config("password").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="report_path">[Out_Config("Reportpath").ToString]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </State.Entry>
@@ -197,7 +187,7 @@
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="selector_click">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='SUB' parentid='main_wfStatusBar' tag='SPAN' /&gt;</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="element_exist_selector" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='SUB' parentid='main_wfStatusBar' tag='SPAN' class='StatusLabelchevron pft-wfstatusbar' parentclass='master_wfStatusBarchevron statusbarchevron linked  pft-wfstatusbar' idx='2' /&gt;</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="selector_subtitle_status" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='SUB' parentid='main_wfStatusBar' tag='SPAN' class='StatusLabelchevron pft-wfstatusbar' parentclass='master_wfStatusBarchevron statusbarchevron linked  pft-wfstatusbar' idx='3' /&gt;</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="selector_subtitle_status">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='SUB' css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;pft-lflatamprocessmonitoringv2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;pft-lflatamsubtitlev2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;pft-wfcomponent&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;pft-wfstatusbar&amp;gt;div&amp;gt;span' parentid='main_wfStatusBar' tag='SPAN' /&gt;</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="selector_getInfostatus">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl parentid='drpDown_' tag='SPAN' /&gt;</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="reportpath">[Out_Config("Reportpath").ToString]</InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
@@ -299,7 +289,7 @@
                                           <Transition.To>
                                             <State x:Name="__ReferenceID5" DisplayName="Upload" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_7">
                                               <State.Entry>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,508" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,660" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -339,6 +329,23 @@
 &lt;ctrl name='Mark Task Complete' role='grouping' /&gt;
 </InArgument>
                                                       <InArgument x:TypeArguments="x:String" x:Key="selector_alert_before_upload">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl idx='2' isleaf='1' parentid='alertWrapper' tag='DIV' /&gt;</InArgument>
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Notification_Belll_Status.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="selector_notification_bell">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='SCFileDownload' tag='DIV' class='linked clear-notificationsNone fileDownloadIcon' /&gt;</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="selector_uploadtext" xml:space="preserve">&lt;html app='chrome.exe' title='CLEAR' /&gt;
+&lt;webctrl tag='SPAN' class='notiStatusCompleted Ellipsis statusContent' parentclass='notif-Status' /&gt;
+</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="element_exists">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl id='downloadPopUpPanel' tag='DIV' /&gt;</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="reportpath" />
+                                                      <InArgument x:TypeArguments="x:String" x:Key="selector_markascomplete">&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='CLEAR - Google Chrome' /&gt;&lt;ctrl name='CLEAR' role='document' /&gt;&lt;ctrl idx='2' role='row' /&gt;&lt;ctrl name='Click here to mark task as Complete' role='grouping' /&gt;&lt;ctrl idx='1' role='grouping' /&gt;</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="selector_markcomplete" xml:space="preserve">&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='CLEAR - Google Chrome' /&gt;
+&lt;ctrl name='CLEAR' role='document' /&gt;
+&lt;ctrl idx='2' role='row' /&gt;
+&lt;ctrl name='Mark Task Complete' role='grouping' /&gt;
+</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="selector_success_alert">&lt;html app='chrome.exe' title='CLEAR' /&gt;&lt;webctrl aaname='Task status updated successfully' parentid='alertWrapper' tag='DIV' /&gt;</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                   </ui:InvokeWorkflowFile>
                                                 </Sequence>
@@ -423,7 +430,7 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                           <Transition.To>
-                                                            <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
+                                                            <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="422,469" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
                                                               <State.Entry>
                                                                 <Sequence sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                                                   <sap:WorkflowViewStateService.ViewState>
@@ -433,21 +440,43 @@
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="MoveFileRenamewithDate.xaml">
                                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="report_path">[Out_Config("Reportpath").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="final_path">[Out_Config("Final_Reportpath").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="file_to_rename">[Out_Config("File_Rename").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="renamedfilePath">[Out_Config("RenameFile").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="recipients">[Out_Config("To").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="subject">[Out_Config("Subject").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="email_body">[Out_Config("Email_body").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="attach_file">[Out_Config("Final_Reportpath").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="emailid">[Out_Config("Email").ToString]</InArgument>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="password">[Out_Config("Email_Password").ToString]</InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="report_path">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Reportpath&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="final_path">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Final_Reportpath&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="file_to_rename">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;File_Rename&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="renamedfilePath">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;RenameFile&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="recipients">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;To&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="subject">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Subject&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="email_body">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Email_body&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="attach_file">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Final_Reportpath&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="emailid">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Email&quot;).ToString" />
+                                                                      </InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="password">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Email_Password&quot;).ToString" />
+                                                                      </InArgument>
                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                   </ui:InvokeWorkflowFile>
                                                                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Delete_All.xaml">
                                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                                      <InArgument x:TypeArguments="x:String" x:Key="delete_filepath">[Out_Config("Final_Reportpath").ToString]</InArgument>
+                                                                      <InArgument x:TypeArguments="x:String" x:Key="delete_filepath">
+                                                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Out_Config(&quot;Final_Reportpath&quot;).ToString" />
+                                                                      </InArgument>
                                                                     </ui:InvokeWorkflowFile.Arguments>
                                                                   </ui:InvokeWorkflowFile>
                                                                 </Sequence>

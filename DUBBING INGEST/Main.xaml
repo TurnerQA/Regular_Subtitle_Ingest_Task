@@ -84,15 +84,25 @@
           <av:PointCollection x:Key="ConnectorLocation">60,82.5 90,82.5 90,76.05 140,76.05</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID7" DisplayName="Initilization" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_1">
+      <State x:Name="__ReferenceID7" DisplayName="Initilization" sap:VirtualizedContainerService.HintSize="380,472" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Initialization.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InOutArgument x:TypeArguments="x:String" x:Key="ConfigFile">[ConfigFile]</InOutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="ConfigSheet">[ConfigSheet]</OutArgument>
-              <InOutArgument x:TypeArguments="s:String[]" x:Key="ConfigSheets">[ConfigSheets]</InOutArgument>
-              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="ConfigDT">[ConfigDT]</InOutArgument>
-              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Config">[Out_Config]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:String" x:Key="ConfigFile">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ConfigFile" />
+              </InOutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="ConfigSheet">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ConfigSheet" />
+              </OutArgument>
+              <InOutArgument x:TypeArguments="s:String[]" x:Key="ConfigSheets">
+                <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="ConfigSheets" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="ConfigDT">
+                <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="ConfigDT" />
+              </InOutArgument>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Config">
+                <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Out_Config" />
+              </InOutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </State.Entry>
@@ -500,7 +510,7 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <Transition.To>
-                                                              <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="422,469" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
+                                                              <State x:Name="__ReferenceID1" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_3" IsFinal="True">
                                                                 <State.Entry>
                                                                   <Sequence sap:VirtualizedContainerService.HintSize="376,356" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                                     <sap:WorkflowViewStateService.ViewState>
